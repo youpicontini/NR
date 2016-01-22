@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head manifest="offline.appcache">
+
+    <title>NR</title>
+
+    <!--WEB APP-->
+    <!-- IOS -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- ANDROID -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="icon.png">
+    <!-- WINDOWS -->
+    <meta name="application-name" content="NR"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-square70x70logo" content="tiny.png"/>
+    <meta name="msapplication-square150x150logo" content="square.png"/>
+    <meta name="msapplication-wide310x150logo" content="wide.png"/>
+    <meta name="msapplication-square310x310logo" content="large.png"/>
+    <!-- /WEB APP-->
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!--JS-->
+    <script src="lib/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+    <script src="lib/twitterFetcher_min.js" type="text/javascript" ></script>
+    <script src="js/index.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<script>
+    document.body.addEventListener('touchmove', function(event) {
+        console.log(event.source);
+        event.preventDefault();
+    }, false);
+
+    window.onresize = function() {
+        $(document.body).width(window.innerWidth).height(window.innerHeight);
+    }
+
+    $(function() {
+        window.onresize();
+    });
+</script>
+
+    <div class="container">
+        <div id="facebook">
+            <div class="post-fb"><span>15012016</span></br><span>statut statu statutstatut statu statutstatut statu statut</span></div>
+            <div class="image"><img src="img/fb/fb1.jpg"></div>
+        </div>
+        <div class="mask"></div>
+        <div id="instagram">
+        </div>
+        <div class="twitter">
+            <div id="twitter"></div>
+            <div id="cursor"></div>
+        </div>
+        <div class="title-app">N R 3 - N O R D</div>
+        <div class="credits"><a href="http://www.kont.fr" target="_blank">KONT</a> / <a href="http://www.nouveauxromans.com" target="_blank">NOUVEAUXROMANS</a></div>
+    </div>
+    <div class="cover">
+        <div class="info-text"></div>
+    </div>
+</body>
+</html>
